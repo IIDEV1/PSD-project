@@ -1,0 +1,22 @@
+{
+  "name": "psd-project",
+  "version": "1.0.0",
+  "description": "Static HTML/CSS/JS landing page assembled from PSD assets.",
+  "main": "index.html",
+  "scripts": {
+    "extract:preview": "node ./scripts/extract-psd.js ./main.psd ./artifacts",
+    "extract:assets": "node ./scripts/export-assets.js",
+    "start": "node ./scripts/start-server.js",
+    "start:4173": "npx http-server . -p 4173 -c-1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "http-server": "^14.1.1",
+    "pngjs": "^7.0.0",
+    "psd": "^3.4.0",
+    "sharp": "^0.34.5"
+  }
+}

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AMBIT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/home.css?v=20260605-2" />
+</head>
+
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="/index.html" aria-label="AMBIT">
+          <img src="./assets/images/logo.png" alt="AMBIT" />
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" id="main-nav">
+          <a href="/about.html">О нас</a>
+          <a href="#news">Новости</a>
+          <a href="/download.html">Скачать</a>
+          <a href="/catalog.html">Каталог</a>
+          <a href="/request.html">Купить</a>
+        </nav>
+        <button class="search-button" type="button" aria-label="Поиск">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="6.5"></circle>
+            <path d="M16 16L21 21"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <button class="hero-slider__arrow hero-slider__arrow--prev" type="button" aria-label="Предыдущий слайд"
+          data-hero-prev></button>
+        <button class="hero-slider__arrow hero-slider__arrow--next" type="button" aria-label="Следующий слайд"
+          data-hero-next></button>
+
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1 data-hero-title>Стабильность<br />создающая<br />комфорт</h1>
+            <p data-hero-text>
+              Системная целостность инженерных систем сохраняет среду в заданных параметрах,
+              делая комфорт естественным состоянием пространства.
+            </p>
+          </div>
+          <div class="hero-media">
+            <div class="hero-frame">
+              <img src="./assets/images/hero-slide-1.png" alt="Серверные шкафы и инженерная инфраструктура"
+                data-hero-image />
+            </div>
+          </div>
+        </div>
+
+        <div class="container hero-bottom">
+          <div class="hero-shortcuts">
+            <a class="hero-plain-link" href="#news">Новости</a>
+            <a class="button button--accent" href="/about.html">Изучить подход</a>
+          </div>
+          <div class="hero-socials hero-socials--image" aria-label="Контакты">
+            <img src="./assets/main-icons/hero-socials.png" alt="Телефон, почта, Telegram и мессенджер" />
+          </div>
+        </div>
+      </section>
+
+      <section class="approach" id="about">
+        <div class="container split-section">
+          <div class="angled-media angled-media--left">
+            <img src="./assets/images/approach-visual.png" alt="Подход к созданию комфорта" />
+          </div>
+          <div class="section-copy section-copy--right">
+            <h2>Наш подход<br />
+              к созданию<br />
+              комфорта</h2>
+            <p>
+              Комфорт формируется как результат устойчивой работы инженерной среды.
+              Он возникает не как отдельная цель, а как следствие корректно организованных процессов.
+            </p>
+            <p>
+              Инженерная система рассматривается как часть общей структуры пространства
+              и влияет на его функционирование в целом.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-band">
+          <div class="container feature-grid">
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true"><img src="./assets/main-icons/feature-understanding.png"
+                  alt="" /></div>
+              <h3>Понимание задач</h3>
+              <p>Работа начинается с анализа объекта и условий его эксплуатации. Фиксируются сценарии использования и
+                требования к инженерной среде.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true"><img src="./assets/main-icons/feature-systems.png" alt="" />
+              </div>
+              <h3>Согласованность систем</h3>
+              <p>Инженерные решения связываются в единую структуру. Исключаются конфликты между элементами
+                инфраструктуры.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true"><img src="./assets/main-icons/feature-precision.png"
+                  alt="" /></div>
+              <h3>Точность реализации</h3>
+              <p>Проектные параметры переносятся в реализацию без отклонений. Качество исполнения определяет
+                корректность работы системы.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true"><img src="./assets/main-icons/feature-support.png" alt="" />
+              </div>
+              <h3>Сопровождение на всех этапах</h3>
+              <p>Проект ведётся через весь цикл - от разработки до ввода в эксплуатацию. Логика решений сохраняется в
+                процессе реализации.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true"><img src="./assets/main-icons/feature-control.png" alt="" />
+              </div>
+              <h3>Поддержка и контроль</h3>
+              <p>После запуска фиксируются рабочие параметры системы. При необходимости выполняется корректировка
+                эксплуатации.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="container stats-row">
+          <div class="stat-item"><strong>15+</strong><span>лет опыта</span></div>
+          <div class="stat-item"><strong>250+</strong><span>реализованных объектов</span></div>
+          <div class="stat-item"><strong>100+</strong><span>инженеров<br />и специалистов</span></div>
+        </div>
+        <div class="container stats-action">
+          <a class="button button--accent" href="#catalog">Смотреть решения</a>
+        </div>
+      </section>
+
+      <section class="solutions" id="catalog">
+        <div class="container split-section split-section--solutions">
+          <div class="section-copy">
+            <h2>Решения для разных задач</h2>
+            <p>
+              Инженерные решения формируются под условия конкретного объекта и сценарии его эксплуатации.
+              Коммерческая, промышленная и инфраструктурная недвижимость отличаются характером нагрузок
+              и требованиями к инженерной логике.
+            </p>
+          </div>
+          <div class="angled-media angled-media--right">
+            <img src="./assets/images/solutions-visual.png" alt="Решения для разных задач" />
+          </div>
+        </div>
+
+        <div class="container">
+          <nav class="tabs" aria-label="Типы решений">
+            <a class="tab-button is-active" href="#catalog">Все решения</a>
+            <a class="tab-button" href="#catalog">Коммерческие объекты</a>
+            <a class="tab-button" href="#catalog">Промышленность</a>
+            <a class="tab-button" href="#catalog">Инфраструктура</a>
+          </nav>
+
+          <div class="solution-grid">
+            <article class="solution-card">
+              <div class="solution-card__image"><img src="./assets/images/solution-1.png"
+                  alt="Презентационные кондиционеры" /></div>
+              <div class="solution-card__body">
+                <h3>Презентационные кондиционеры</h3>
+                <p>Стабильный микроклимат для технологических и чувствительных процессов.</p>
+                <a class="card-link" href="/request.html">Подробнее</a>
+              </div>
+            </article>
+
+            <article class="solution-card">
+              <div class="solution-card__image"><img src="./assets/images/solution-2.png"
+                  alt="Центральные кондиционеры" /></div>
+              <div class="solution-card__body">
+                <h3>Центральные кондиционеры</h3>
+                <p>Поддержка комфортных параметров воздуха в зданиях любого назначения.</p>
+                <a class="card-link" href="/request.html">Подробнее</a>
+              </div>
+            </article>
+
+            <article class="solution-card">
+              <div class="solution-card__image"><img src="./assets/images/solution-3.png"
+                  alt="Чиллеры с воздушным охлаждением" /></div>
+              <div class="solution-card__body">
+                <h3>Чиллеры с воздушным охлаждением</h3>
+                <p>Высокоэффективное решение для систем холодоснабжения коммерческих и промышленных объектов.</p>
+                <a class="card-link" href="/request.html">Подробнее</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="section-action">
+            <a class="button button--accent" href="/catalog.html">Смотреть весь каталог</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="news" id="news">
+        <div class="container split-section">
+          <div class="angled-media angled-media--left">
+            <img src="./assets/images/news-visual.png" alt="Новости компании" />
+          </div>
+          <div class="section-copy section-copy--right">
+            <h2>Новости</h2>
+            <p>Реализованные проекты, технические решения и событиями компании.</p>
+          </div>
+        </div>
+
+        <div class="container news-layout">
+          <aside class="news-sidebar">
+            <a class="news-filter is-active" href="#news">Все новости</a>
+            <a class="news-filter" href="#news">Проекты</a>
+            <a class="news-filter" href="#news">Технологии</a>
+            <a class="news-filter" href="#news">Продукты</a>
+            <a class="news-filter" href="#news">Компания</a>
+            <a class="news-filter" href="#news">События</a>
+            <a class="news-filter" href="#news">Партнёрства</a>
+            <a class="news-filter" href="#news">Пресса о нас</a>
+          </aside>
+
+          <div class="news-content">
+            <div class="news-toolbar">
+              <div class="sort-controls">
+                <span>Сортировать:</span>
+                <a class="toolbar-button is-active" href="#news">по дате</a>
+                <a class="toolbar-button" href="#news">по популярности</a>
+              </div>
+              <div class="view-controls">
+                <a class="toolbar-button is-active" href="#news">Сетка</a>
+                <a class="toolbar-button" href="#news">Список</a>
+              </div>
+            </div>
+
+            <div class="news-grid">
+              <article class="news-card">
+                <div class="news-card__image"><img src="./assets/images/news-1.png"
+                    alt="Завершён проект инженерных систем для бизнес центра" /></div>
+                <div class="news-card__body">
+                  <h3>Завершён проект инженерных систем для бизнес центра.</h3>
+                  <p>Реализована система холодоснабжения и вентиляции с применением чиллеров последнего поколения.</p>
+                  <a class="card-link card-link--accent" href="/request.html">Подробнее</a>
+                </div>
+              </article>
+
+              <article class="news-card">
+                <div class="news-card__image"><img src="./assets/images/news-2.png"
+                    alt="Завершён проект инженерных систем для бизнес центра" /></div>
+                <div class="news-card__body">
+                  <h3>Завершён проект инженерных систем для бизнес центра.</h3>
+                  <p>Реализована система холодоснабжения и вентиляции с применением чиллеров последнего поколения.</p>
+                  <a class="card-link card-link--accent" href="/request.html">Подробнее</a>
+                </div>
+              </article>
+
+              <article class="news-card">
+                <div class="news-card__image"><img src="./assets/images/news-3.png"
+                    alt="Завершён проект инженерных систем для бизнес центра" /></div>
+                <div class="news-card__body">
+                  <h3>Завершён проект инженерных систем для бизнес центра.</h3>
+                  <p>Реализована система холодоснабжения и вентиляции с применением чиллеров последнего поколения.</p>
+                  <a class="card-link card-link--accent" href="/request.html">Подробнее</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="site-footer__bg"><img src="./assets/images/footer-bg.png" alt="" aria-hidden="true" /></div>
+      <div class="container footer-row">
+        <a class="brand brand--footer" href="/index.html" aria-label="AMBIT"><img src="./assets/images/logo.png"
+            alt="AMBIT" /></a>
+        <nav class="footer-nav">
+          <a href="/about.html">О нас</a>
+          <a href="#news">Новости</a>
+          <a href="/download.html">Скачать</a>
+          <a href="/catalog.html">Каталог</a>
+          <a href="/request.html">Купить</a>
+        </nav>
+        <div class="footer-socials">
+          <a href="#contact" aria-label="Телефон"><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M7.4 3.5c.5-.5 1.3-.7 2-.4l2.2 1c.8.4 1.2 1.3 1 2.2L12 8.7c1.1 2 2.7 3.6 4.7 4.7l2.4-.6c.9-.2 1.8.2 2.2 1l1 2.2c.3.7.1 1.5-.4 2-1 1-2.4 1.6-3.8 1.4C9.8 18.7 5.3 14.2 4.6 8.1c-.2-1.4.4-2.8 1.4-3.8Z">
+              </path>
+            </svg></a>
+          <a href="#contact" aria-label="Почта"><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 6.5h18v11H3z"></path>
+              <path d="m4 7 8 6 8-6"></path>
+            </svg></a>
+          <a href="#contact" aria-label="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M21.5 4.5 18.4 19c-.2 1-1 .9-1.6.6l-4.7-3.5-2.2 2.1c-.2.2-.4.4-.8.4l.3-4.8 8.8-8c.4-.4-.1-.6-.6-.3L6.7 12.3l-4.6-1.4c-1-.3-1-1 .2-1.5l17.8-6.8c.8-.3 1.5.2 1.3 1.9Z">
+              </path>
+            </svg></a>
+          <a href="#contact" aria-label="Мессенджер"><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 3c5 0 9 3.6 9 8.1s-4 8.1-9 8.1c-.9 0-1.8-.1-2.6-.4L4 21l1.7-4.6C4.6 15 3 13.1 3 11.1 3 6.6 7 3 12 3Z">
+              </path>
+            </svg></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const heroSlides = [
+      {
+        title: "Стабильность<span class='hero-punctuation'>,</span><br>создающая<br>комфорт",
+        text: "Системная целостность инженерных систем сохраняет среду в заданных параметрах, делая комфорт естественным состоянием пространства.",
+        image: "./assets/images/hero-slide-1.png",
+        alt: "Серверные шкафы и инженерная инфраструктура",
+      },
+      {
+        title: "Точность<br>исполнения<br>формирует<br>надёжность<span class='hero-punctuation'>.</span>",
+        text: "Реализация проектных параметров на этапе установки определяет устойчивость функционирования системы и снижает вероятность отклонений в работе.",
+        image: "./assets/images/hero-main.png",
+        alt: "Инженерная система AMBIT",
+      },
+    ];
+
+    const heroTitle = document.querySelector("[data-hero-title]");
+    const heroText = document.querySelector("[data-hero-text]");
+    const heroImage = document.querySelector("[data-hero-image]");
+    const heroPrev = document.querySelector("[data-hero-prev]");
+    const heroNext = document.querySelector("[data-hero-next]");
+
+    let heroIndex = 0;
+
+    function renderHeroSlide() {
+      const slide = heroSlides[heroIndex];
+      if (!slide || !heroTitle || !heroText || !heroImage) return;
+      heroTitle.innerHTML = slide.title;
+      heroText.textContent = slide.text;
+      heroImage.src = slide.image;
+      heroImage.alt = slide.alt;
+    }
+
+    heroPrev?.addEventListener("click", () => {
+      heroIndex = (heroIndex - 1 + heroSlides.length) % heroSlides.length;
+      renderHeroSlide();
+    });
+
+    heroNext?.addEventListener("click", () => {
+      heroIndex = (heroIndex + 1) % heroSlides.length;
+      renderHeroSlide();
+    });
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mainNav = document.querySelector(".main-nav");
+
+    menuToggle?.addEventListener("click", () => {
+      const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!expanded));
+      mainNav?.classList.toggle("is-open", !expanded);
+    });
+
+    renderHeroSlide();
+  </script>
+</body>
+
+</html>

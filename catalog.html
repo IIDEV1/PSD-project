@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог | AMBIT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/catalog.css?v=20260605-1" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container header-row">
+          <a class="brand" href="/index.html" aria-label="AMBIT"><img src="./assets/images/logo.png" alt="AMBIT" /></a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+          <nav class="main-nav" id="main-nav">
+            <a href="/about.html">О нас</a>
+            <a href="/#news">Новости</a>
+            <a href="/download.html">Скачать</a>
+            <a href="/catalog.html">Каталог</a>
+            <a href="/request.html">Купить</a>
+          </nav>
+          <button class="search-button" type="button" aria-label="Поиск">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.5"></circle>
+              <path d="M16 16L21 21"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main>
+        <section class="inner-hero">
+          <div class="container inner-hero__grid">
+            <div class="inner-hero__copy">
+              <h1>Каталог</h1>
+              <p>
+                Инженерные решения для различных типов объектов и сценариев эксплуатации.
+                Подбор систем осуществляется в зависимости от условий работы объекта.
+              </p>
+            </div>
+            <div class="inner-hero__image inner-hero__image--right">
+              <img src="./assets/pages/catalog-hero.png" alt="Инженерные коммуникации" />
+            </div>
+          </div>
+        </section>
+        <section class="catalog-page">
+          <div class="container catalog-layout">
+            <aside class="catalog-sidebar">
+              <h2>Оборудование</h2>
+              <div class="catalog-sidebar__list">
+                <button class="catalog-item is-active" type="button">
+                  <span class="catalog-item__icon"><img src="./assets/catalog/fan.png" alt="" /></span>
+                  <span class="catalog-item__label">Вентиляторы</span>
+                </button>
+                <button class="catalog-item" type="button">
+                  <span class="catalog-item__icon"><img src="./assets/catalog/damper.png" alt="" /></span>
+                  <span class="catalog-item__label">Воздушные клапана</span>
+                </button>
+                <button class="catalog-item" type="button">
+                  <span class="catalog-item__icon"><img src="./assets/catalog/aircon.png" alt="" /></span>
+                  <span class="catalog-item__label">Кондиционеры</span>
+                </button>
+                <button class="catalog-item" type="button">
+                  <span class="catalog-item__icon"><img src="./assets/catalog/heat.png" alt="" /></span>
+                  <span class="catalog-item__label">Теплообменники</span>
+                </button>
+                <button class="catalog-item" type="button">
+                  <span class="catalog-item__icon"><img src="./assets/catalog/duct.png" alt="" /></span>
+                  <span class="catalog-item__label">Воздуховоды</span>
+                </button>
+                <button class="catalog-item" type="button">
+                  <span class="catalog-item__icon"><img src="./assets/catalog/silencer.png" alt="" /></span>
+                  <span class="catalog-item__label">Шумоглушители</span>
+                </button>
+                <button class="catalog-item" type="button">
+                  <span class="catalog-item__icon"><img src="./assets/catalog/filter.png" alt="" /></span>
+                  <span class="catalog-item__label">Фильтры</span>
+                </button>
+                <button class="catalog-item" type="button">
+                  <span class="catalog-item__icon"><img src="./assets/catalog/humidifier.png" alt="" /></span>
+                  <span class="catalog-item__label">Увлажнители</span>
+                </button>
+              </div>
+            </aside>
+            <div class="catalog-content">
+              <h2>Категории</h2>
+              <div class="category-grid">
+                <article class="category-card">
+                  <img src="./assets/catalog/ventilation.png" alt="Вентиляция" />
+                  <h3 class="sr-only">Вентиляция</h3>
+                </article>
+                <article class="category-card">
+                  <img src="./assets/catalog/cold.png" alt="Холод" />
+                  <h3 class="sr-only">Холод</h3>
+                </article>
+                <article class="category-card">
+                  <img src="./assets/catalog/controller.png" alt="Щиты контроллерные" />
+                  <h3 class="sr-only">Щиты контроллерные</h3>
+                </article>
+                <article class="category-card">
+                  <img src="./assets/catalog/mixing.png" alt="Смесительные узлы" />
+                  <h3 class="sr-only">Смесительные узлы</h3>
+                </article>
+                <article class="category-card">
+                  <img src="./assets/catalog/kipia.png" alt="КИПиА" />
+                  <h3 class="sr-only">КИПиА</h3>
+                </article>
+                <article class="category-card">
+                  <img src="./assets/catalog/dispatch.png" alt="Диспетчеризация" />
+                  <h3 class="sr-only">Диспетчеризация</h3>
+                </article>
+              </div>
+              <div class="catalog-actions">
+                <a class="button button--accent" href="/request.html">Отправить запрос</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const mainNav = document.querySelector(".main-nav");
+
+      menuToggle?.addEventListener("click", () => {
+        const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!expanded));
+        mainNav?.classList.toggle("is-open", !expanded);
+      });
+
+      mainNav?.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menuToggle?.setAttribute("aria-expanded", "false");
+          mainNav?.classList.remove("is-open");
+        });
+      });
+    </script>
+  </body>
+</html>

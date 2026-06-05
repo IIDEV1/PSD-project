@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>О компании | AMBIT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/about.css?v=20260605-1" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container header-row">
+          <a class="brand" href="/index.html" aria-label="AMBIT"><img src="./assets/images/logo.png" alt="AMBIT" /></a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+          <nav class="main-nav" id="main-nav">
+            <a href="/about.html">О нас</a>
+            <a href="/#news">Новости</a>
+            <a href="/download.html">Скачать</a>
+            <a href="/catalog.html">Каталог</a>
+            <a href="/request.html">Купить</a>
+          </nav>
+          <button class="search-button" type="button" aria-label="Поиск">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.5"></circle>
+              <path d="M16 16L21 21"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main>
+        <section class="inner-hero about-hero">
+          <div class="container inner-hero__grid">
+            <div class="inner-hero__copy">
+              <h1>О компании</h1>
+              <p>Работа с инженерной и эксплуатационной средой объектов коммерческой и промышленной недвижимости.</p>
+              <p>Основной фокус - проектирование и реализация систем, которые обеспечивают корректную работу инфраструктуры объекта на всех этапах.</p>
+              <div class="about-badges-image">
+                <img src="./assets/about/badges-row.png" alt="Гарантия 5 лет, надёжность, качество, оперативность, точность, профессионализм" />
+              </div>
+            </div>
+            <div class="inner-hero__image inner-hero__image--right">
+              <img src="./assets/pages/about-hero.png" alt="Фасад инженерного объекта" />
+            </div>
+          </div>
+        </section>
+
+        <section class="about-coordination">
+          <div class="container about-coordination__grid">
+            <div class="angled-media angled-media--left"><img src="./assets/pages/about-coordination.png" alt="Инженерная координация" /></div>
+            <div class="section-copy section-copy--right">
+              <h2>Инженерная координация</h2>
+              <p>Связывание инженерных систем в единую рабочую структуру объекта. Фокус на согласовании решений между разделами проектирования и эксплуатации.</p>
+              <a class="button button--accent" href="/request.html">Изучить подход</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="about-details">
+          <div class="container about-details__grid">
+            <div>
+              <h2>Компетенции</h2>
+              <ul class="plain-list">
+                <li>проектирование</li>
+                <li>разработка ПО</li>
+                <li>поставка оборудования</li>
+                <li>монтаж</li>
+                <li>шеф монтаж</li>
+                <li>пусконаладка</li>
+                <li>техническая поддержка</li>
+                <li>сервисное обслуживание</li>
+                <li>обучение</li>
+              </ul>
+            </div>
+            <div class="standard-note">
+              <span class="mini-badge"><img src="./assets/about/standard-icon.png" alt="" /></span>
+              <p>Работаем в соответствии с международными стандартами качества и требований безопасности. Постоянно развиваем экспертизу и внедряем передовые технологии.</p>
+            </div>
+            <div>
+              <h2>Где мы работаем</h2>
+              <div class="work-grid-image">
+                <img src="./assets/about/work-icons.png" alt="Торговые и логистические комплексы, спортивные сооружения, инфраструктурные объекты, коммерческая недвижимость, промышленные предприятия, медицинские учреждения" />
+              </div>
+            </div>
+            <div class="angled-media angled-media--right"><img src="./assets/pages/about-work.png" alt="Промышленный фасад" /></div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const mainNav = document.querySelector(".main-nav");
+
+      menuToggle?.addEventListener("click", () => {
+        const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!expanded));
+        mainNav?.classList.toggle("is-open", !expanded);
+      });
+
+      mainNav?.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menuToggle?.setAttribute("aria-expanded", "false");
+          mainNav?.classList.remove("is-open");
+        });
+      });
+    </script>
+  </body>
+</html>

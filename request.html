@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Отправить запрос | AMBIT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/request.css?v=20260605-1" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container header-row">
+          <a class="brand" href="/index.html" aria-label="AMBIT"><img src="./assets/images/logo.png" alt="AMBIT" /></a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+          <nav class="main-nav" id="main-nav">
+            <a href="/about.html">О нас</a>
+            <a href="/#news">Новости</a>
+            <a href="/download.html">Скачать</a>
+            <a href="/catalog.html">Каталог</a>
+            <a href="/request.html">Купить</a>
+          </nav>
+          <button class="search-button" type="button" aria-label="Поиск">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.5"></circle>
+              <path d="M16 16L21 21"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main>
+        <section class="inner-hero">
+          <div class="container inner-hero__grid">
+            <div class="inner-hero__copy">
+              <h1>Обсудить проект</h1>
+              <p>Проект начинается с анализа объекта и условий его работы.</p>
+            </div>
+            <div class="inner-hero__image inner-hero__image--right">
+              <img src="./assets/pages/request-hero.png" alt="Фасад с красной линией" />
+            </div>
+          </div>
+        </section>
+        <section class="request-page">
+          <div class="container request-grid">
+            <div class="request-info">
+              <h2>Опишите задачу — предложим инженерное решение под условия эксплуатации.</h2>
+              <div class="request-steps">
+                <p><span class="request-step-icon"><img src="./assets/request/equipment.png" alt="" /></span>Подберём оборудование под ваши требования</p>
+                <p><span class="request-step-icon"><img src="./assets/request/technical.png" alt="" /></span>Подготовим техническое решение и спецификацию</p>
+                <p><span class="request-step-icon"><img src="./assets/request/consulting.png" alt="" /></span>Проконсультируем по внедрению и сервису</p>
+              </div>
+              <div class="direct-contact">
+                <strong>Или свяжитесь напрямую</strong>
+                <a href="tel:+70000000000">Позвонить</a>
+                <a href="mailto:info@example.com">Написать</a>
+              </div>
+            </div>
+            <form class="request-form">
+              <label>Имя<span>*</span><input type="text" /></label>
+              <label>Компания<span>*</span><input type="text" /></label>
+              <label>E-mail<span>*</span><input type="email" /></label>
+              <label>Телефон<span>*</span><input type="tel" /></label>
+              <label>Тип объекта<span>*</span><input type="text" /></label>
+              <label>Описание задачи<textarea rows="6"></textarea></label>
+              <label class="file-field">Прикрепить файл<input type="file" /></label>
+              <label class="checkbox-row"><input type="checkbox" />Я согласен на обработку персональных данных</label>
+              <button class="button button--accent" type="submit">Отправить запрос</button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const mainNav = document.querySelector(".main-nav");
+
+      menuToggle?.addEventListener("click", () => {
+        const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!expanded));
+        mainNav?.classList.toggle("is-open", !expanded);
+      });
+
+      mainNav?.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menuToggle?.setAttribute("aria-expanded", "false");
+          mainNav?.classList.remove("is-open");
+        });
+      });
+    </script>
+  </body>
+</html>

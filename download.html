@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Скачать | AMBIT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/download.css?v=20260605-1" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container header-row">
+          <a class="brand" href="/index.html" aria-label="AMBIT"><img src="./assets/images/logo.png" alt="AMBIT" /></a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+          <nav class="main-nav" id="main-nav">
+            <a href="/about.html">О нас</a>
+            <a href="/#news">Новости</a>
+            <a href="/download.html">Скачать</a>
+            <a href="/catalog.html">Каталог</a>
+            <a href="/request.html">Купить</a>
+          </nav>
+          <button class="search-button" type="button" aria-label="Поиск">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.5"></circle>
+              <path d="M16 16L21 21"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main>
+        <section class="inner-hero">
+          <div class="container inner-hero__grid">
+            <div class="inner-hero__copy">
+              <h1>Технические материалы и документация</h1>
+              <p>Документы по инженерным решениям и системам объекта. Используются для проектирования и эксплуатации.</p>
+            </div>
+            <div class="inner-hero__image inner-hero__image--right"><img src="./assets/pages/download-hero.png" alt="Технический фасад" /></div>
+          </div>
+        </section>
+        <section class="download-page">
+          <div class="container download-layout">
+            <aside class="materials-sidebar">
+              <h2>Смотреть документацию</h2>
+              <button class="news-filter is-active" type="button">Все материалы</button>
+              <button class="news-filter" type="button">Техническая документация</button>
+              <button class="news-filter" type="button">BIM-модели</button>
+              <button class="news-filter" type="button">CAD чертежи</button>
+              <button class="news-filter" type="button">Руководства</button>
+              <button class="news-filter" type="button">Сертификаты</button>
+              <button class="news-filter" type="button">Презентации</button>
+              <div class="document-help">
+                <strong>Не нашли нужный документ?</strong>
+                <p>Запросите его у нашего специалиста.</p>
+                <a class="button button--accent" href="/request.html">Отправить запрос</a>
+              </div>
+            </aside>
+            <div class="download-content">
+              <div class="download-head">
+                <h2>Скачать</h2>
+                <a class="button button--outline" href="/catalog.html">Смотреть весь каталог</a>
+              </div>
+              <div class="document-list">
+                <a href="#"><span class="doc-icon"><img src="./assets/download-icons/catalog.png" alt="" /></span>Каталог оборудования<i><img src="./assets/download-icons/download-arrow.png" alt="" /></i></a>
+                <a href="#"><span class="doc-icon"><img src="./assets/download-icons/passport.png" alt="" /></span>Технические паспорта<i><img src="./assets/download-icons/download-arrow.png" alt="" /></i></a>
+                <a href="#"><span class="doc-icon"><img src="./assets/download-icons/manual.png" alt="" /></span>Руководство по эксплуатации<i><img src="./assets/download-icons/download-arrow.png" alt="" /></i></a>
+                <a href="#"><span class="doc-icon"><img src="./assets/download-icons/bim.png" alt="" /></span>BIM - модели<i><img src="./assets/download-icons/download-arrow.png" alt="" /></i></a>
+                <a href="#"><span class="doc-icon"><img src="./assets/download-icons/drawing.png" alt="" /></span>Чертежи и схемы<i><img src="./assets/download-icons/download-arrow.png" alt="" /></i></a>
+                <a href="#"><span class="doc-icon"><img src="./assets/download-icons/certificate.png" alt="" /></span>Сертификаты<i><img src="./assets/download-icons/download-arrow.png" alt="" /></i></a>
+                <a href="#"><span class="doc-icon"><img src="./assets/download-icons/offer.png" alt="" /></span>Коммерческое предложение<i><img src="./assets/download-icons/download-arrow.png" alt="" /></i></a>
+                <a href="#"><span class="doc-icon"><img src="./assets/download-icons/presentation.png" alt="" /></span>Презентация<i><img src="./assets/download-icons/download-arrow.png" alt="" /></i></a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const mainNav = document.querySelector(".main-nav");
+
+      menuToggle?.addEventListener("click", () => {
+        const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!expanded));
+        mainNav?.classList.toggle("is-open", !expanded);
+      });
+
+      mainNav?.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menuToggle?.setAttribute("aria-expanded", "false");
+          mainNav?.classList.remove("is-open");
+        });
+      });
+    </script>
+  </body>
+</html>
