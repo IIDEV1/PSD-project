@@ -159,13 +159,13 @@
 
         <div class="container">
           <nav class="tabs" aria-label="Типы решений">
-            <a class="tab-button is-active" href="#catalog">Все решения</a>
-            <a class="tab-button" href="#catalog">Коммерческие объекты</a>
-            <a class="tab-button" href="#catalog">Промышленность</a>
-            <a class="tab-button" href="#catalog">Инфраструктура</a>
+            <a class="tab-button is-active" href="#catalog" data-solution-tab="all">Все решения</a>
+            <a class="tab-button" href="#catalog" data-solution-tab="commercial">Коммерческие объекты</a>
+            <a class="tab-button" href="#catalog" data-solution-tab="industry">Промышленность</a>
+            <a class="tab-button" href="#catalog" data-solution-tab="infrastructure">Инфраструктура</a>
           </nav>
 
-          <div class="solution-grid">
+          <div class="solution-grid" data-solution-grid>
             <article class="solution-card">
               <div class="solution-card__image"><img src="./assets/images/solution-1.png"
                   alt="Презентационные кондиционеры" /></div>
@@ -216,30 +216,30 @@
 
         <div class="container news-layout">
           <aside class="news-sidebar">
-            <a class="news-filter is-active" href="#news">Все новости</a>
-            <a class="news-filter" href="#news">Проекты</a>
-            <a class="news-filter" href="#news">Технологии</a>
-            <a class="news-filter" href="#news">Продукты</a>
-            <a class="news-filter" href="#news">Компания</a>
-            <a class="news-filter" href="#news">События</a>
-            <a class="news-filter" href="#news">Партнёрства</a>
-            <a class="news-filter" href="#news">Пресса о нас</a>
+            <a class="news-filter is-active" href="#news" data-news-filter="all">Все новости</a>
+            <a class="news-filter" href="#news" data-news-filter="projects">Проекты</a>
+            <a class="news-filter" href="#news" data-news-filter="tech">Технологии</a>
+            <a class="news-filter" href="#news" data-news-filter="products">Продукты</a>
+            <a class="news-filter" href="#news" data-news-filter="company">Компания</a>
+            <a class="news-filter" href="#news" data-news-filter="events">События</a>
+            <a class="news-filter" href="#news" data-news-filter="partners">Партнёрства</a>
+            <a class="news-filter" href="#news" data-news-filter="press">Пресса о нас</a>
           </aside>
 
           <div class="news-content">
             <div class="news-toolbar">
               <div class="sort-controls">
                 <span>Сортировать:</span>
-                <a class="toolbar-button is-active" href="#news">по дате</a>
-                <a class="toolbar-button" href="#news">по популярности</a>
+                <a class="toolbar-button is-active" href="#news" data-news-sort="date">по дате</a>
+                <a class="toolbar-button" href="#news" data-news-sort="popular">по популярности</a>
               </div>
               <div class="view-controls">
-                <a class="toolbar-button is-active" href="#news">Сетка</a>
-                <a class="toolbar-button" href="#news">Список</a>
+                <a class="toolbar-button is-active" href="#news" data-news-view="grid">Сетка</a>
+                <a class="toolbar-button" href="#news" data-news-view="list">Список</a>
               </div>
             </div>
 
-            <div class="news-grid">
+            <div class="news-grid" data-news-grid>
               <article class="news-card">
                 <div class="news-card__image"><img src="./assets/images/news-1.png"
                     alt="Завершён проект инженерных систем для бизнес центра" /></div>
@@ -315,7 +315,7 @@
   <script>
     const heroSlides = [
       {
-        title: "Стабильность<span class='hero-punctuation'>,</span><br>создающая<br>комфорт",
+        title: "Стабильность<br>создающая<br>комфорт",
         text: "Системная целостность инженерных систем сохраняет среду в заданных параметрах, делая комфорт естественным состоянием пространства.",
         image: "./assets/images/hero-slide-1.png",
         alt: "Серверные шкафы и инженерная инфраструктура",
@@ -353,6 +353,203 @@
     heroNext?.addEventListener("click", () => {
       heroIndex = (heroIndex + 1) % heroSlides.length;
       renderHeroSlide();
+    });
+
+    const solutionTabs = document.querySelectorAll("[data-solution-tab]");
+    const solutionGrid = document.querySelector("[data-solution-grid]");
+    const solutionItems = {
+      all: [
+        {
+          image: "./assets/images/solution-1.png",
+          alt: "Презентационные кондиционеры",
+          title: "Презентационные кондиционеры",
+          text: "Стабильный микроклимат для технологических и чувствительных процессов.",
+        },
+        {
+          image: "./assets/images/solution-2.png",
+          alt: "Центральные кондиционеры",
+          title: "Центральные кондиционеры",
+          text: "Поддержка комфортных параметров воздуха в зданиях любого назначения.",
+        },
+        {
+          image: "./assets/images/solution-3.png",
+          alt: "Чиллеры с воздушным охлаждением",
+          title: "Чиллеры с воздушным охлаждением",
+          text: "Высокоэффективное решение для систем холодоснабжения коммерческих и промышленных объектов.",
+        },
+      ],
+      commercial: [
+        {
+          image: "./assets/images/solution-2.png",
+          alt: "Центральные кондиционеры",
+          title: "Центральные кондиционеры",
+          text: "Комфортные параметры воздуха для офисных, торговых и общественных пространств.",
+        },
+        {
+          image: "./assets/images/solution-1.png",
+          alt: "Прецизионное кондиционирование",
+          title: "Прецизионное кондиционирование",
+          text: "Точная поддержка климата для помещений с высокой нагрузкой на оборудование.",
+        },
+        {
+          image: "./assets/images/news-3.png",
+          alt: "Инженерные системы здания",
+          title: "Инженерные системы здания",
+          text: "Согласованная работа вентиляции, охлаждения и автоматики для коммерческих объектов.",
+        },
+      ],
+      industry: [
+        {
+          image: "./assets/images/solution-3.png",
+          alt: "Промышленное холодоснабжение",
+          title: "Промышленное холодоснабжение",
+          text: "Надежные решения для технологических процессов и производственных площадок.",
+        },
+        {
+          image: "./assets/images/solution-1.png",
+          alt: "Шкафы управления",
+          title: "Шкафы управления",
+          text: "Контроль параметров инженерных систем и защита оборудования на объекте.",
+        },
+        {
+          image: "./assets/images/solution-2.png",
+          alt: "Вентиляционные установки",
+          title: "Вентиляционные установки",
+          text: "Подготовка воздуха для производственных зон с разными режимами эксплуатации.",
+        },
+      ],
+      infrastructure: [
+        {
+          image: "./assets/images/news-2.png",
+          alt: "Инфраструктурные системы",
+          title: "Инфраструктурные системы",
+          text: "Комплексная инженерная среда для объектов с высокой эксплуатационной нагрузкой.",
+        },
+        {
+          image: "./assets/images/solution-3.png",
+          alt: "Системы диспетчеризации",
+          title: "Системы диспетчеризации",
+          text: "Единый контроль и мониторинг параметров инженерной инфраструктуры.",
+        },
+        {
+          image: "./assets/images/solution-1.png",
+          alt: "Резервирование систем",
+          title: "Резервирование систем",
+          text: "Стабильность работы критичных зон за счет резервных сценариев и контроля.",
+        },
+      ],
+    };
+
+    function renderSolutionCards(type = "all") {
+      if (!solutionGrid) return;
+      const items = solutionItems[type] || solutionItems.all;
+      solutionGrid.innerHTML = items
+        .map((item) => `
+          <article class="solution-card">
+            <div class="solution-card__image"><img src="${item.image}" alt="${item.alt}" /></div>
+            <div class="solution-card__body">
+              <h3>${item.title}</h3>
+              <p>${item.text}</p>
+              <a class="card-link" href="/request.html">Подробнее</a>
+            </div>
+          </article>
+        `)
+        .join("");
+    }
+
+    solutionTabs.forEach((tab) => {
+      tab.addEventListener("click", (event) => {
+        event.preventDefault();
+        solutionTabs.forEach((item) => item.classList.remove("is-active"));
+        tab.classList.add("is-active");
+        renderSolutionCards(tab.dataset.solutionTab);
+      });
+    });
+
+    const newsGrid = document.querySelector("[data-news-grid]");
+    const newsFilters = document.querySelectorAll("[data-news-filter]");
+    const newsSortButtons = document.querySelectorAll("[data-news-sort]");
+    const newsViewButtons = document.querySelectorAll("[data-news-view]");
+    const newsItems = [
+      {
+        category: "projects",
+        date: 3,
+        popularity: 2,
+        image: "./assets/images/news-1.png",
+        alt: "Инженерные системы бизнес центра",
+        title: "Завершён проект инженерных систем для бизнес центра.",
+        text: "Реализована система холодоснабжения и вентиляции с применением чиллеров последнего поколения.",
+      },
+      {
+        category: "tech",
+        date: 2,
+        popularity: 3,
+        image: "./assets/images/news-2.png",
+        alt: "Техническое решение для здания",
+        title: "Внедрено решение для устойчивой работы инженерных систем.",
+        text: "Системы объединены в единую структуру для контроля параметров и быстрого обслуживания.",
+      },
+      {
+        category: "company",
+        date: 1,
+        popularity: 1,
+        image: "./assets/images/news-3.png",
+        alt: "Фасад коммерческого здания",
+        title: "Компания завершила этап координации проектных решений.",
+        text: "Подготовлены рабочие сценарии эксплуатации и требования к инженерной инфраструктуре.",
+      },
+    ];
+    let activeNewsFilter = "all";
+    let activeNewsSort = "date";
+
+    function renderNewsCards() {
+      if (!newsGrid) return;
+      const visibleItems = newsItems
+        .filter((item) => activeNewsFilter === "all" || item.category === activeNewsFilter)
+        .sort((a, b) => activeNewsSort === "popular" ? b.popularity - a.popularity : b.date - a.date);
+
+      newsGrid.innerHTML = visibleItems
+        .map((item) => `
+          <article class="news-card">
+            <div class="news-card__image"><img src="${item.image}" alt="${item.alt}" /></div>
+            <div class="news-card__body">
+              <h3>${item.title}</h3>
+              <p>${item.text}</p>
+              <a class="card-link card-link--accent" href="/request.html">Подробнее</a>
+            </div>
+          </article>
+        `)
+        .join("");
+    }
+
+    newsFilters.forEach((filter) => {
+      filter.addEventListener("click", (event) => {
+        event.preventDefault();
+        activeNewsFilter = filter.dataset.newsFilter || "all";
+        newsFilters.forEach((item) => item.classList.remove("is-active"));
+        filter.classList.add("is-active");
+        renderNewsCards();
+      });
+    });
+
+    newsSortButtons.forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.preventDefault();
+        activeNewsSort = button.dataset.newsSort || "date";
+        newsSortButtons.forEach((item) => item.classList.remove("is-active"));
+        button.classList.add("is-active");
+        renderNewsCards();
+      });
+    });
+
+    newsViewButtons.forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.preventDefault();
+        const view = button.dataset.newsView || "grid";
+        newsViewButtons.forEach((item) => item.classList.remove("is-active"));
+        button.classList.add("is-active");
+        newsGrid?.classList.toggle("is-list", view === "list");
+      });
     });
 
     const menuToggle = document.querySelector(".menu-toggle");
