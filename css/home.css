@@ -28,7 +28,7 @@
 
 .hero {
   position: relative;
-  padding: 42px 0 36px;
+  padding: 42px 0 154px;
   border-bottom: 1px solid var(--line-strong);
 }
 
@@ -175,8 +175,8 @@
 }
 
 .feature-band {
-  margin-top: 58px;
-  padding: 54px 0 48px;
+  margin-top: 76px;
+  padding: 64px 0 62px;
   border-top: 1px solid var(--line-strong);
   border-bottom: 1px solid var(--line-strong);
 }
@@ -223,7 +223,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 84px;
-  padding: 40px 0 0;
+  padding: 78px 0 0;
 }
 
 .stat-item strong {
@@ -239,7 +239,7 @@
 }
 
 .stats-action {
-  padding-top: 54px;
+  padding-top: 70px;
 }
 
 .solutions {
@@ -256,12 +256,12 @@
 .split-section--solutions {
   display: block;
   position: relative;
-  min-height: 420px;
+  min-height: 500px;
   margin-top: -112px;
 }
 
 .split-section--solutions .section-copy {
-  padding-top: 126px;
+  padding-top: 158px;
   padding-right: 0;
   max-width: 760px;
   min-width: 0;
@@ -324,7 +324,7 @@
 }
 
 .solution-grid {
-  padding-top: 54px;
+  padding-top: 66px;
   gap: 44px;
 }
 
@@ -342,7 +342,7 @@
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
-  min-height: 330px;
+  min-height: 395px;
   padding-top: 26px;
 }
 
@@ -367,7 +367,7 @@
 .card-link {
   gap: 16px;
   margin-top: auto;
-  padding-top: 92px;
+  padding-top: 112px;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0;
@@ -379,11 +379,11 @@
 }
 
 .section-action {
-  padding-top: 40px;
+  padding-top: 70px;
 }
 
 .news {
-  padding-top: 52px;
+  padding-top: 88px;
   padding-bottom: 0;
 }
 
@@ -546,7 +546,7 @@
 }
 
 .site-footer {
-  margin-top: 66px;
+  margin-top: 104px;
 }
 
 .brand--footer img {
@@ -588,6 +588,10 @@
 }
 
 @media (max-width: 1200px) {
+  .hero {
+    padding-bottom: 72px;
+  }
+
   .hero-grid {
     grid-template-columns: minmax(330px, 41%) minmax(0, 1fr);
     gap: 28px;
@@ -658,6 +662,7 @@
   .stats-row {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 28px;
+    padding-top: 46px;
   }
 
   .stats-row .button {
@@ -666,6 +671,14 @@
 
   .news-layout {
     grid-template-columns: 1fr;
+  }
+
+  .news {
+    padding-top: 56px;
+  }
+
+  .site-footer {
+    margin-top: 66px;
   }
 
   .news-grid.is-list .news-card {
@@ -688,6 +701,7 @@
 
   .hero {
     padding-top: 20px;
+    padding-bottom: 52px;
   }
 
   .hero-copy {
@@ -808,8 +822,12 @@
   .approach .section-copy h2,
   .split-section--solutions .section-copy h2,
   .news .section-copy h2 {
-    font-size: 30px;
+    font-size: 28px;
     line-height: 1.02;
+  }
+
+  .split-section--solutions .section-copy h2 {
+    font-size: 25px;
   }
 
   .hero-copy p {
