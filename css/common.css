@@ -6,7 +6,7 @@
   --muted: #5f666c;
   --line: #d7dade;
   --line-strong: #bcc1c8;
-  --accent: #b0242c;
+  --accent: #a3232c;
   --accent-dark: #8f1b22;
   --shadow: 0 24px 48px rgba(22, 28, 35, 0.08);
 }
@@ -211,7 +211,7 @@ button {
 
 .button--ghost,
 .button--outline {
-  border: 1px solid rgba(176, 36, 44, 0.18);
+  border: 1px solid rgba(163, 35, 44, 0.18);
   color: var(--accent);
   background: rgba(255, 255, 255, 0.76);
 }
